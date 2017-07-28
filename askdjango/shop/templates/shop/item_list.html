@@ -1,0 +1,36 @@
+{% extends 'shop/layout.html' %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <form action="" method="get">
+                <input type="text" name="query" value="{{ query }}" class="form-control"/>
+                </form>
+            </div>
+
+            <div class="col-sm-3">
+                <form action="" method="get">
+                <input type="submit" value="검색" class="btn btn-primary"/>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <a href="{% url 'shop:item_new' %}">새로운 상품 등록</a>
+
+    <ul>
+    {%  for item in item_list %}
+        <li>
+            {{ item.pk }}
+            <a href="{% url 'shop:item_detail' item.pk %}">
+                {{ item.name }}
+            </a>
+            <small>({{ item.created_at|timesince }})</small>
+
+        </li>
+    {% endfor %}
+    </ul>
+
+{% endblock %}
