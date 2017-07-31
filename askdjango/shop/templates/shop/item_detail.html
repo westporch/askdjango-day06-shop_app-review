@@ -1,8 +1,9 @@
 {% extends "shop/layout.html" %}
+{% load humanize %} # 가격에 콤마 출력을 지원함
 
 {% block content %}
     <h1>{{ item.name }}</h1>
-    <h2>가격: {{ item.price }}원</h2>
+    <h2>가격: {{ item.price|intcomma }}원</h2> <!-- 가격에 콤마 출력을 지원함 -->
     {{ item.desc|linebreaks }}
     <hr/>
 
@@ -11,3 +12,4 @@
     <a href="{% url 'shop:item_delete' item.pk %}" class="btn btn-danger">삭제</a>
 {% endblock %}
 
+100000

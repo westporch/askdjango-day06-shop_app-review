@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize', # 가격에서 콤마 출력을 지원한다.
     'debug_toolbar',
     'bootstrap3',
     'shop',
