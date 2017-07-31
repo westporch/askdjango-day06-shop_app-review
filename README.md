@@ -7,12 +7,4 @@ shop 모델을 만들고 item_list, item_detail, item_new, item_edit, item_delet
 
 ## 버전
 
-```bash
-(myenv) # pip3 freeze
-Django==1.11.3
-django-bootstrap3==9.0.0
-django-debug-toolbar==1.8
-pkg-resources==0.0.0
-pytz==2017.2
-sqlparse==0.2.3
-```
+참고: [requirements.txt](https://github.com/westporch/askdjango-day06-shop_app-review/blob/master/askdjango/requirements.txt) 
